@@ -1,0 +1,13 @@
+{
+    "name": "worker-a",
+    "version": "0.0.1",
+    "type": "module",
+    "private": true,
+    "description": "Apify runtime multi-actor simulation: worker-a",
+    "scripts": {
+        "start": "node src/main.js"
+    },
+    "dependencies": {
+        "apify": "^3.2.0"
+    }
+}

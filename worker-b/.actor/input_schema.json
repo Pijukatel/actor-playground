@@ -1,0 +1,37 @@
+{
+    "title": "Worker B input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "taskName": {
+            "title": "Task name",
+            "type": "string",
+            "description": "Free-form label propagated into every produced item.",
+            "editor": "textfield",
+            "default": "unnamed-task"
+        },
+        "steps": {
+            "title": "Steps",
+            "type": "integer",
+            "description": "How many simulated work steps to perform.",
+            "default": 3,
+            "minimum": 1,
+            "maximum": 100
+        },
+        "stepDurationMs": {
+            "title": "Step duration (ms)",
+            "type": "integer",
+            "description": "How long a single simulated step takes.",
+            "default": 2000,
+            "minimum": 0,
+            "maximum": 60000
+        },
+        "failOnPurpose": {
+            "title": "Fail on purpose",
+            "type": "boolean",
+            "description": "Throw at the end of the work instead of succeeding. Used to test the orchestrator's failure path.",
+            "default": false
+        }
+    },
+    "required": []
+}

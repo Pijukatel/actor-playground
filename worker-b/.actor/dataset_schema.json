@@ -1,0 +1,23 @@
+{
+    "actorSpecification": 1,
+    "fields": {
+        "type": "object",
+        "properties": {
+            "worker": { "type": "string" },
+            "role": { "type": "string" },
+            "taskName": { "type": "string" },
+            "step": { "type": "integer" },
+            "value": { "type": "integer" },
+            "processedAt": { "type": "string" }
+        }
+    },
+    "views": {
+        "overview": {
+            "title": "Produced items",
+            "transformation": {
+                "fields": ["worker", "role", "taskName", "step", "value", "processedAt"]
+            },
+            "display": { "component": "table" }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "title": "Orchestrator input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "jobName": {
+            "title": "Job name",
+            "type": "string",
+            "description": "Label for this orchestration run.",
+            "editor": "textfield",
+            "default": "demo-job"
+        },
+        "waitSecs": {
+            "title": "Wait timeout (s)",
+            "type": "integer",
+            "description": "How long to wait for each worker run to finish before giving up.",
+            "default": 300,
+            "minimum": 1
+        },
+        "workerMemoryMbytes": {
+            "title": "Worker memory (MB)",
+            "type": "integer",
+            "description": "Memory to allocate to each worker run. Leave empty for the Actor default.",
+            "minimum": 128
+        },
+        "workerA": {
+            "title": "Worker A",
+            "type": "object",
+            "description": "Actor ID and input for the first worker.",
+            "editor": "json",
+            "default": {
+                "actorId": "worker-a",
+                "input": { "taskName": "collect", "steps": 5, "stepDurationMs": 1000 }
+            }
+        },
+        "workerB": {
+            "title": "Worker B",
+            "type": "object",
+            "description": "Actor ID and input for the second worker.",
+            "editor": "json",
+            "default": {
+                "actorId": "worker-b",
+                "input": { "taskName": "analyze", "steps": 3, "stepDurationMs": 2000 }
+            }
+        }
+    },
+    "required": []
+}
