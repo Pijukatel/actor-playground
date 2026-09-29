@@ -1,0 +1,9 @@
+{
+    "actorSpecification": 1,
+    "name": "standby-greeter",
+    "title": "Standby greeter",
+    "description": "Demo Standby Actor: an HTTP server that greets whoever calls it.",
+    "version": "0.0",
+    "usesStandbyMode": true,
+    "dockerfile": "../Dockerfile"
+}

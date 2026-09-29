@@ -1,0 +1,14 @@
+{
+    "name": "caller",
+    "version": "0.0.1",
+    "type": "module",
+    "description": "Demo Actor that calls the standby-greeter Standby Actor over HTTP.",
+    "main": "src/main.js",
+    "scripts": {
+        "start": "node src/main.js"
+    },
+    "dependencies": {
+        "apify": "^3.4.0"
+    },
+    "private": true
+}

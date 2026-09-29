@@ -1,0 +1,14 @@
+{
+    "name": "standby-greeter",
+    "version": "0.0.1",
+    "type": "module",
+    "description": "Demo Standby Actor: an HTTP server that greets whoever calls it.",
+    "main": "src/main.js",
+    "scripts": {
+        "start": "node src/main.js"
+    },
+    "dependencies": {
+        "apify": "^3.4.0"
+    },
+    "private": true
+}

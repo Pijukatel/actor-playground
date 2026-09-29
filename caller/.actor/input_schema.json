@@ -1,0 +1,21 @@
+{
+    "title": "Standby caller input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "standbyActor": {
+            "title": "Standby Actor",
+            "type": "string",
+            "description": "Name (`standby-greeter`), `username/name` or ID of the Standby Actor to call.",
+            "editor": "textfield",
+            "default": "standby-greeter"
+        },
+        "names": {
+            "title": "Names",
+            "type": "array",
+            "description": "One greeting request is sent to the Standby Actor per name.",
+            "editor": "stringList",
+            "default": ["Alice", "Bob", "Charlie"]
+        }
+    }
+}

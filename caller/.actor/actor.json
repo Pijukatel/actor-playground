@@ -1,0 +1,9 @@
+{
+    "actorSpecification": 1,
+    "name": "caller",
+    "title": "Standby caller",
+    "description": "Demo Actor that calls the standby-greeter Standby Actor over HTTP.",
+    "version": "0.0",
+    "input": "./input_schema.json",
+    "dockerfile": "../Dockerfile"
+}
