@@ -1,0 +1,43 @@
+{
+	"title": "Feature probe input",
+	"type": "object",
+	"schemaVersion": 1,
+	"properties": {
+		"mode": {
+			"title": "Mode",
+			"type": "string",
+			"description": "What the probe does.",
+			"editor": "select",
+			"enum": ["env", "status", "sleep", "fail", "schema-bad", "output"],
+			"default": "env"
+		},
+		"sleepSecs": {
+			"title": "Sleep seconds",
+			"type": "integer",
+			"description": "How long the sleep mode runs.",
+			"default": 60,
+			"minimum": 1
+		},
+		"failUntilAttempt": {
+			"title": "Fail until attempt",
+			"type": "integer",
+			"description": "In fail mode: attempts (counted in the run's key-value store) below this number throw; the next one succeeds.",
+			"default": 1,
+			"minimum": 0
+		},
+		"wantMemoryMbytes": {
+			"title": "Wanted memory",
+			"type": "integer",
+			"description": "Feeds the defaultMemoryMbytes expression of actor.json.",
+			"default": 256
+		},
+		"secretField": {
+			"title": "Secret field",
+			"type": "string",
+			"description": "A secret input field.",
+			"editor": "textfield",
+			"isSecret": true
+		}
+	},
+	"required": []
+}

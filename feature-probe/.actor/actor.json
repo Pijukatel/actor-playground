@@ -1,0 +1,42 @@
+{
+	"actorSpecification": 1,
+	"name": "feature-probe",
+	"title": "Feature probe for actor-runtime compatibility testing",
+	"description": "Exercises run status messages, run metadata env vars, extra named datasets (storageIds), dataset schema validation, restart-on-error / resurrect, a run web server, and long-running sleeps for abort/migrate/timeout tests.",
+	"version": "0.0",
+	"buildTag": "latest",
+	"dockerfile": "../Dockerfile",
+	"input": "./input_schema.json",
+	"defaultMemoryMbytes": "get(input, 'wantMemoryMbytes', 256)",
+	"minMemoryMbytes": 256,
+	"maxMemoryMbytes": 1024,
+	"environmentVariables": {
+		"PROBE_PLAIN": "plain-value",
+		"PROBE_SECRET": "@probeSecret"
+	},
+	"storages": {
+		"datasets": {
+			"default": {
+				"actorSpecification": 1,
+				"title": "Probe items",
+				"fields": {
+					"type": "object",
+					"properties": {
+						"kind": { "type": "string" },
+						"value": { "type": "string" }
+					},
+					"required": ["kind"],
+					"additionalProperties": true
+				}
+			},
+			"extra": {
+				"actorSpecification": 1,
+				"title": "Extra dataset",
+				"fields": {
+					"type": "object",
+					"properties": { "note": { "type": "string" } }
+				}
+			}
+		}
+	}
+}
