@@ -4,5 +4,5 @@
     "type": "module",
     "main": "src/main.js",
     "scripts": { "start": "node src/main.js" },
-    "dependencies": { "apify": "^3.2.0" }
+    "dependencies": { "apify": "^3.2.0", "apify-client": "2.25.0" }
 }
